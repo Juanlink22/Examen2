@@ -1,12 +1,18 @@
 package ejercicio1;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CatalogoProductos {
     private final List<Producto> productos;
 
     public CatalogoProductos(List<Producto> productos) {
-        this.productos = productos;
+        this.productos = new ArrayList<>(productos);
+    }
+
+    public void ordenar(){
+        Collections.sort(productos);
     }
 
     public Producto buscarSinStock() {

@@ -13,4 +13,9 @@ public class Auto implements Vehiculo {
     public String descripcion() {
         return "Auto " + marca + " " + modelo;
     }
+
+    @Override
+    public String toString() {
+        return descripcion();
+    }
 }

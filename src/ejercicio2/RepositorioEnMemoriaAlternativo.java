@@ -13,6 +13,9 @@ public class RepositorioEnMemoriaAlternativo<T> implements Repositorio<T> {
 
     @Override
     public T obtener(int indice) {
+        if (indice < 0 || indice >= elementos.size()){
+            throw new IllegalArgumentException("Indice fuera de rango: " + indice + ", tamaño" + elementos.size());
+        }
         return elementos.get(indice);
     }
 

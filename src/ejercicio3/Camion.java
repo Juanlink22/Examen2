@@ -13,4 +13,9 @@ public class Camion implements Vehiculo {
     public String descripcion() {
         return "Camion " + marca + " (" + capacidadKg + " kg)";
     }
+
+    @Override
+    public String toString() {
+        return descripcion();
+    }
 }

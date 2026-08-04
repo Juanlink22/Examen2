@@ -12,7 +12,6 @@ import ejercicio3.Flota;
 import ejercicio3.Vehiculo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -39,7 +38,7 @@ public class Main {
         System.out.println("Original:");
         catalogo.imprimir();
 
-        Collections.sort(productos);
+        catalogo.ordenar();
         System.out.println("Ordenado por precio ascendente:");
         catalogo.imprimir();
 
@@ -76,6 +75,11 @@ public class Main {
         flota.agregar(new Camion("Volvo", 12000));
         flota.agregar(new Auto("Mazda", "3"));
         flota.alertar("Alerta de mantenimiento");
+
+        System.out.println("Vehiculos en la flota:");
+        for (Vehiculo v :flota.recorrer()){
+            System.out.println(" " + v.descripcion());
+        }
 
         System.out.println("Cambiando solo la linea del canal a CanalCorreo:");
         canal = new CanalCorreo();

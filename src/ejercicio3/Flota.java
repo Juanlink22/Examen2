@@ -15,6 +15,10 @@ public class Flota<T extends Vehiculo> {
         vehiculos.add(vehiculo);
     }
 
+    public List<T> recorrer() {
+        return new ArrayList<>(vehiculos);
+    }
+
     public void alertar(String mensajeBase) {
         StringBuilder mensaje = new StringBuilder(mensajeBase);
         mensaje.append(" | vehiculos: ");
