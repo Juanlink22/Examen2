@@ -2,12 +2,14 @@
 
 package ejercicio1;
 
+import java.math.BigDecimal;
+
 public class Producto implements Comparable<Producto> {
     private final String nombre;
-    private final double precio;
+    private final BigDecimal precio;
     private final int stock;
 
-    public Producto(String nombre, double precio, int stock) {
+    public Producto(String nombre, BigDecimal precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -17,7 +19,7 @@ public class Producto implements Comparable<Producto> {
         return nombre;
     }
 
-    public double getPrecio() {
+    public BigDecimal getPrecio() {
         return precio;
     }
 
@@ -27,7 +29,7 @@ public class Producto implements Comparable<Producto> {
 
     @Override
     public int compareTo(Producto otro) {
-        return Double.compare(this.precio, otro.precio);
+        return this.precio.compareTo(otro.precio);
     }
 
     @Override

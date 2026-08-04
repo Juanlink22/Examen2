@@ -17,7 +17,7 @@ public class CatalogoProductos {
 
     public Producto buscarSinStock() {
         if (productos == null) {
-            return null;
+            throw new IllegalArgumentException("La lista no puede ser null");
         }
 
         for (Producto producto : productos) {

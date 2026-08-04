@@ -11,6 +11,7 @@ import ejercicio3.CanalCorreo;
 import ejercicio3.Flota;
 import ejercicio3.Vehiculo;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +29,10 @@ public class Main {
         System.out.println("=== Ejercicio 1: Catalogo ordenable ===");
 
         List<Producto> productos = new ArrayList<>();
-        productos.add(new Producto("Teclado", 49.99, 10));
-        productos.add(new Producto("Mouse", 19.99, 0));
-        productos.add(new Producto("Monitor", 199.99, 4));
-        productos.add(new Producto("Audifonos", 34.99, 2));
+        productos.add(new Producto("Teclado", new BigDecimal("49.99"), 10));
+        productos.add(new Producto("Mouse", new BigDecimal("19.99"), 0));
+        productos.add(new Producto("Monitor", new BigDecimal("199.99"), 4));
+        productos.add(new Producto("Audifonos", new BigDecimal("34.99"), 2));
 
         CatalogoProductos catalogo = new CatalogoProductos(productos);
 
